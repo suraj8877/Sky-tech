@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about SkyTech Solutions - Our mission, vision, and team of aviation technology experts">
+    <title>About Us | SkyTech Solutions</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item:not(:last-child):after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 32px;
+            height: calc(100% - 32px);
+            width: 2px;
+            background: #e5e7eb;
+        }
+        .values-card:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <svg class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L3 10L6 10L6 22L10 22L10 15L14 15L14 22L18 22L18 10L21 10L12 2Z" fill="currentColor"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-blue-800">SkyTech</span>
+                    </a>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:space-x-8">
+                    <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                    <a href="services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
+                    <a href="about.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                    <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    <a href="login.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Login</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="services.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Services</a>
+                <a href="about.html" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About</a>
+                <a href="contact.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
+                <a href="login.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Header -->
+    <div class="pt-24 pb-20 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl" data-aos="fade-up">
+                    About SkyTech Solutions
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-xl" data-aos="fade-up" data-aos-delay="100">
+                    Pioneering aviation technology solutions since 2010
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Story -->
+    <div class="bg-white py-16" id="our-story">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="lg:col-span-6" data-aos="fade-right">
+                    <img class="rounded-lg shadow-xl" src="http://static.photos/office/1024x576/7" alt="SkyTech office">
+                </div>
+                <div class="mt-12 lg:mt-0 lg:col-span-6" data-aos="fade-left">
+                    <h2 class="text-3xl font-extrabold text-gray-900">
+                        Our Story
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500">
+                        Founded in 2010 by aviation industry veterans, SkyTech Solutions was born out of a shared frustration with outdated technology systems in the airline industry.
+                    </p>
+                    <div class="mt-8">
+                        <div class="relative pl-9 timeline-item">
+                            <div class="absolute left-0 top-0 flex items-center justify-center h-7 w-7 rounded-full bg-blue-500 text-white">
+                                <i data-feather="flag"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-900">2010 - The Beginning</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Three airline operations experts and two software engineers came together to build better solutions for the industry they loved.
+                            </p>
+                        </div>
+                        <div class="relative pl-9 mt-8 timeline-item">
+                            <div class="absolute left-0 top-0 flex items-center justify-center h-7 w-7 rounded-full bg-blue-500 text-white">
+                                <i data-feather="award"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-900">2014 - First Major Client</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Implemented our flight operations platform for a regional carrier, proving our technology at scale.
+                            </p>
+                        </div>
+                        <div class="relative pl-9 mt-8 timeline-item">
+                            <div class="absolute left-0 top-0 flex items-center justify-center h-7 w-7 rounded-full bg-blue-500 text-white">
+                                <i data-feather="globe"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-900">2018 - Global Expansion</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Expanded operations to Europe and Asia, serving international airlines with localized solutions.
+                            </p>
+                        </div>
+                        <div class="relative pl-9 mt-8">
+                            <div class="absolute left-0 top-0 flex items-center justify-center h-7 w-7 rounded-full bg-blue-500 text-white">
+                                <i data-feather="trending-up"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-900">Today - Industry Leader</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Serving over 50 airlines worldwide with a comprehensive suite of aviation technology solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Values -->
+    <div class="bg-gray-50 py-16" id="our-values">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900">
+                    Our Values
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    The principles that guide everything we do
+                </p>
+            </div>
+
+            <div
+</body>
+</html>

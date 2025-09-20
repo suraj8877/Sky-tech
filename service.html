@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkyTech Solutions - Comprehensive technology services for the airline industry">
+    <title>Our Services | SkyTech Solutions</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .service-feature {
+            transition: all 0.3s ease;
+        }
+        .service-feature:hover {
+            transform: translateY(-5px);
+        }
+        .tab-active {
+            border-bottom: 3px solid #2563eb;
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <svg class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L3 10L6 10L6 22L10 22L10 15L14 15L14 22L18 22L18 10L21 10L12 2Z" fill="currentColor"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-blue-800">SkyTech</span>
+                    </a>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:space-x-8">
+                    <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                    <a href="services.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
+                    <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                    <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    <a href="login.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Login</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="services.html" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Services</a>
+                <a href="about.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About</a>
+                <a href="contact.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
+                <a href="login.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Header -->
+    <div class="pt-24 pb-20 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl" data-aos="fade-up">
+                    Our Services
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-xl" data-aos="fade-up" data-aos-delay="100">
+                    Comprehensive technology solutions designed specifically for the airline industry
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Tabs -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-b border-gray-200">
+                <nav class="-mb-px flex space-x-8 overflow-x-auto" aria-label="Tabs">
+                    <button data-tab="flight-ops" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm tab-active">
+                        Flight Operations
+                    </button>
+                    <button data-tab="passenger-exp" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                        Passenger Experience
+                    </button>
+                    <button data-tab="revenue" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                        Revenue Optimization
+                    </button>
+                    <button data-tab="maintenance" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                        Maintenance & Safety
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flight Operations Content -->
+    <div id="flight-ops" class="tab-content active">
+        <div class="bg-gray-50 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                    <div class="lg:col-span-6" data-aos="fade-right">
+                        <img class="rounded-lg shadow-xl" src="http://static.photos/technology/1024x576/3" alt="Flight operations dashboard">
+                    </div>
+                    <div class="mt-12 lg:mt-0 lg:col-span-6" data-aos="fade-left">
+                        <h2 class="text-3xl font-extrabold text-gray-900">
+                            Flight Operations Solutions
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-500">
+                            Our comprehensive flight operations platform provides real-time visibility and control over all aspects of your airline's operations.
+                        </p>
+                        <div class="mt-8">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                        <i data-feather="map"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Real-time Flight Tracking</h3>
+                                    <p class="mt-2 text-base text-gray-500">
+                                        Monitor all flights in real-time with predictive analytics for delays, weather impacts, and route optimizations.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <div class="flex">
+                                    <div class="flex-shrink-0">
+                                        <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                            <i data-feather="users"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-medium text-gray-900">Crew Management</h3>
+                                        <p class="mt-2 text-base text-gray-500">
+                                            Automated crew scheduling, fatigue monitoring, and compliance tracking to ensure regulatory requirements are met.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <div class="flex">
+                                    <div class="flex-shrink-0">
+                                        <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                            <i data-feather="clock"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-medium text-gray-900">Operational Efficiency</h3>
+                                        <p class="mt-2 text-base text-gray-500">
+                                            Reduce turnaround times, optimize gate assignments, and streamline ground operations with our intelligent platform.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 text-center">Key Features</h2>
+                <div class="mt-12 grid gap-12 lg:grid-cols-3">
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="alert-octagon"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Disruption Management</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Automated re-accommodation of passengers and crew during irregular operations with minimal manual intervention.
+                        </p>
+                    </div>
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="database"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Integrated Data Platform</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Single source of truth connecting flight operations, crew, maintenance, and passenger data for comprehensive decision making.
+                        </p>
+                    </div>
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="bar-chart-2"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Performance Analytics</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Detailed operational performance metrics and benchmarking against industry standards and historical data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Passenger Experience Content -->
+    <div id="passenger-exp" class="tab-content">
+        <div class="bg-gray-50 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                    <div class="lg:col-span-6 order-last lg:order-first" data-aos="fade-right">
+                        <h2 class="text-3xl font-extrabold text-gray-900">
+                            Passenger Experience Solutions
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-500">
+                            Transform the passenger journey from booking to baggage claim with our innovative digital solutions.
+                        </p>
+                        <div class="mt-8">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                        <i data-feather="smartphone"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Mobile Journey</h3>
+                                    <p class="mt-2 text-base text-gray-500">
+                                        Comprehensive mobile app with personalized notifications, digital boarding passes, and real-time updates.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <div class="flex">
+                                    <div class="flex-shrink-0">
+                                        <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                            <i data-feather="user-check"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-medium text-gray-900">Biometric Processing</h3>
+                                        <p class="mt-2 text-base text-gray-500">
+                                            Facial recognition technology for seamless check-in, security, and boarding processes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <div class="flex">
+                                    <div class="flex-shrink-0">
+                                        <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                            <i data-feather="wifi"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-medium text-gray-900">In-flight Connectivity</h3>
+                                        <p class="mt-2 text-base text-gray-500">
+                                            Integrated entertainment and connectivity solutions to keep passengers engaged throughout their journey.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 order-first lg:order-last mb-12 lg:mb-0" data-aos="fade-left">
+                        <img class="rounded-lg shadow-xl" src="http://static.photos/technology/1024x576/4" alt="Passenger experience interface">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 text-center">Key Features</h2>
+                <div class="mt-12 grid gap-12 lg:grid-cols-3">
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="check-circle"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Frictionless Check-in</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Self-service options across web, mobile, and kiosk platforms with automated document verification.
+                        </p>
+                    </div>
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="navigation"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Wayfinding</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Indoor navigation with real-time directions to gates, lounges, and amenities within the airport.
+                        </p>
+                    </div>
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="heart"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Personalization</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            AI-driven recommendations for ancillary services based on passenger preferences and travel history.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Revenue Optimization Content -->
+    <div id="revenue" class="tab-content">
+        <div class="bg-gray-50 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                    <div class="lg:col-span-6" data-aos="fade-right">
+                        <img class="rounded-lg shadow-xl" src="http://static.photos/technology/1024x576/5" alt="Revenue optimization dashboard">
+                    </div>
+                    <div class="mt-12 lg:mt-0 lg:col-span-6" data-aos="fade-left">
+                        <h2 class="text-3xl font-extrabold text-gray-900">
+                            Revenue Optimization Solutions
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-500">
+                            Maximize your airline's profitability with our advanced revenue management and ancillary sales platform.
+                        </p>
+                        <div class="mt-8">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                        <i data-feather="dollar-sign"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Dynamic Pricing</h3>
+                                    <p class="mt-2 text-base text-gray-500">
+                                        AI-powered pricing algorithms that adjust in real-time based on demand, competition, and market conditions.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <div class="flex">
+                                    <div class="flex-shrink-0">
+                                        <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                            <i data-feather="shopping-bag"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-medium text-gray-900">Ancillary Revenue</h3>
+                                        <p class="mt-2 text-base text-gray-500">
+                                            Personalized offers for seat upgrades, baggage, lounge access, and other ancillary products.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <div class="flex">
+                                    <div class="flex-shrink-0">
+                                        <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                            <i data-feather="trending-up"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-medium text-gray-900">Demand Forecasting</h3>
+                                        <p class="mt-2 text-base text-gray-500">
+                                            Predictive analytics to anticipate booking patterns and optimize inventory allocation.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 text-center">Key Features</h2>
+                <div class="mt-12 grid gap-12 lg:grid-cols-3">
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="cpu"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Machine Learning Models</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Continuously learning algorithms that improve pricing and inventory decisions over time.
+                        </p>
+                    </div>
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="pie-chart"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Revenue Analytics</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Comprehensive dashboards and reports to track performance across all revenue streams.
+                        </p>
+                    </div>
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="refresh-cw"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Automated Optimization</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Real-time adjustments to pricing and availability based on changing market conditions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Maintenance & Safety Content -->
+    <div id="maintenance" class="tab-content">
+        <div class="bg-gray-50 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                    <div class="lg:col-span-6 order-last lg:order-first" data-aos="fade-right">
+                        <h2 class="text-3xl font-extrabold text-gray-900">
+                            Maintenance & Safety Solutions
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-500">
+                            Ensure aircraft safety and maximize operational efficiency with our predictive maintenance platform.
+                        </p>
+                        <div class="mt-8">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                        <i data-feather="activity"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Predictive Maintenance</h3>
+                                    <p class="mt-2 text-base text-gray-500">
+                                        IoT sensors and AI to predict component failures before they occur, reducing unscheduled maintenance.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <div class="flex">
+                                    <div class="flex-shrink-0">
+                                        <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                            <i data-feather="file-text"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-medium text-gray-900">Regulatory Compliance</h3>
+                                        <p class="mt-2 text-base text-gray-500">
+                                        Automated tracking of maintenance activities and documentation for regulatory compliance.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <div class="flex">
+                                    <div class="flex-shrink-0">
+                                        <div class="flex items-center justify-center h-10 w-10 rounded-md bg-blue-500 text-white">
+                                            <i data-feather="shield"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-medium text-gray-900">Safety Management</h3>
+                                        <p class="mt-2 text-base text-gray-500">
+                                            Comprehensive safety reporting and risk assessment tools to maintain the highest safety standards.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 order-first lg:order-last mb-12 lg:mb-0" data-aos="fade-left">
+                        <img class="rounded-lg shadow-xl" src="http://static.photos/technology/1024x576/6" alt="Maintenance dashboard">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 text-center">Key Features</h2>
+                <div class="mt-12 grid gap-12 lg:grid-cols-3">
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="alert-triangle"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Fault Prediction</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Early warning system for potential mechanical issues based on real-time aircraft data.
+                        </p>
+                    </div>
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="calendar"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Maintenance Scheduling</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Optimized scheduling of maintenance activities to minimize aircraft downtime.
+                        </p>
+                    </div>
+                    <div class="service-feature bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="database"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Parts Inventory</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Automated tracking of spare parts inventory with predictive replenishment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-blue-700">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                        Ready to learn more about our solutions?
+                    </h2>
+                    <p class="mt-3 max-w-3xl text-lg leading-6 text-blue-200">
+                        Schedule a demo with our team to see how SkyTech can transform your airline's operations.
+                    </p>
+                </div>
+                <div class="mt-8 lg:mt-0">
+                    <div class="inline-flex rounded-md shadow">
+                        <a href="contact.html" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50">
+                            Contact Our Team
+                        </a>
+                    </div>
+                    <div class="inline-flex ml-3 rounded-md shadow">
+                        <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 bg-opacity-60 hover:bg-opacity-70">
+                            <i data-feather="download" class="mr-2 w-4 h-4"></i>
+                            Download Brochure
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="services.html#flight-ops" class="text-base text-gray-300 hover:text-white">Flight Operations</a></li>
+                        <li><a href="services.html#passenger-exp" class="text-base text-gray-300 hover:text-white">Passenger Experience</a></li>
+                        <li><a href="services.html#revenue" class="text-base text-gray-300 hover:text-white">Revenue Optimization</a></li>
+                        <li><a href="services.html#maintenance" class="text-base text-gray-300 hover:text-white">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="about.html" class="text-base text-gray-300 hover:text-white">About</a></li>
+                        <li><a href="about.html#leadership" class="text-base text-gray-300 hover:text-white">Leadership</a></li>
+                        <li><a href="about.html#careers" class="text-base text-gray-300 hover:text-white">Careers</a></li>
+                        <li><a href="contact.html" class="text-base text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Resources</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Case Studies</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Webinars</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Whitepapers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Connect</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">LinkedIn</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between">
+                <p class="text-base text-gray-400">
+                    &copy; 2023 SkyTech Solutions. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                        <span class="sr-only">Privacy</span>
+                        Privacy Policy
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                        <span class="sr-only">Terms</span>
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                feather.replace();
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Tab functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Update tab buttons
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('tab-active', 'text-gray-900', 'border-blue-500');
+                    btn.classList.add('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
+                });
+                
+                this.classList.add('tab-active', 'text-gray-900', 'border-blue-500');
+                this.classList.remove('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
+                
+                // Update tab content
+                const tabId = this.getAttribute('data-tab');
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Replace icons
+        feather.replace();
+    </script>
+</body>
+</html>

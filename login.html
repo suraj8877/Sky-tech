@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Employee Login Portal - SkyTech Solutions Staff Access">
+    <title>Employee Login | SkyTech Solutions</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .login-card {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .form-input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        .password-toggle {
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+        .password-toggle:hover {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-极4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <svg class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L3 10L6 10L6 22L10 22极10 15L14 15L14 22L18 22L18 10L21 10L12 2Z" fill="currentColor"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-blue-800">SkyTech</span>
+                    </a>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:space-x-8">
+                    <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                    <a href="services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
+                    <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium极">About</a>
+                    <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    <a href="login.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Login</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover极:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="services.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Services</a>
+                <a href="about.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About</a>
+                <a href="contact.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact极</a>
+                <a href="login.html" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Header -->
+    <div class="pt-24 pb-20 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl" data-aos="fade-up">
+                    Employee Portal
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-xl" data-aos="fade-up" data-aos-delay="100">
+                    Secure access for SkyTech Solutions staff members
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="min-h-screen bg-gray-50 py-16 flex flex-col justify-center">
+        <div class="max-w-md mx-auto w-full px-4 sm:px-6 lg:px-8">
+            <div class="login-card bg-white rounded-lg shadow-xl p-8" data-aos="fade-up">
+                <div class="text-center mb-8">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-blue-100">
+                        <i data-feather="lock" class="h-6 w-6 text-blue-600"></i>
+                    </div>
+                    <h2 class="mt-6 text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
+                    <p class="mt-2 text-sm text-gray-600">Enter your credentials to access the employee portal</p>
+                </div>
+
+                <form class="space-y-6" id="login-form">
+                    <div>
+                        <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                        <div class="mt-1">
+                            <input id="username" name="username" type="text" required class="form-input appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Enter your username">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                        <div class="mt-1 relative">
+                            <input id="password" name="password" type="password" required class="form-input appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Enter your password">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                <span class="password-toggle" id="password-toggle">
+                                    <i data-feather="eye" class="h-5 w-5 text-gray-400"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                            <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
+                        </div>
+
+                        <div class="text-sm">
+                            <a href="#" class="font-medium text-blue-600 hover:text-blue-500">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200">
+                            <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                                <i data-feather="log-in" class="h-5 w-5 text-blue-500 group-hover:text-blue-400"></i>
+                            </span>
+                            Sign in
+                        </button>
+                    </div>
+                </form>
+
+                <div class="mt-6">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-gray-500">Security notice</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-blue-50 border border-blue-200 rounded-md p-3">
+                        <p class="text-xs text-blue-800 text-center">
+                            <i data-feather="shield" class="h-3 w-3 inline mr-1"></i>
+                            This portal uses secure encryption. Never share your credentials.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Security Features -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900">Secure Authentication</h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">Our employee portal features enterprise-grade security measures</p>
+            </div>
+
+            <div class="mt-12 grid gap-8 md:grid-cols-3">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                        <i data-feather="shield"></i>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">End-to-End Encryption</h3>
+                    <p class="mt-2 text-base text-gray-500">All data transmitted between your device and our servers is fully encrypted</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class极="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                        <i data-feather="key"></i>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Multi-Factor Ready</h3>
+                    <p class="mt-2 text-base text-gray-500">Support for additional authentication factors to enhance security</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                        <i data-feather="monitor"></i>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Activity Monitoring</h3>
+                    <p class="mt-2 text-base text-gray-500">Continuous monitoring and logging of all access attempts and activities</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="services.html#flight-ops" class="text-base text-gray-300 hover:text-white">Flight Operations</a></li>
+                        <li><a href="services.html#passenger-exp" class="text-base text-gray-300 hover:text-white">Passenger Experience</a></li>
+                        <li><a href="services.html#revenue" class="text-base text-gray-300 hover:text-white">Revenue Optimization</a></li>
+                        <li><a href="services.html#maintenance" class="text-base text-gray-300 hover:text-white">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semib极old text-gray-400 tracking-wider uppercase">Company</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="about.html" class="text-base text-gray-300 hover:text-white">About</a></li>
+                        <li><a href="about.html#leadership极" class="text-base text-gray-300 hover:text-white">Leadership</a></li>
+                        <li><a href="about.html#careers" class="text-base text-gray-300 hover:text-white">Careers</a></li>
+                        <li><a href="contact.html" class="text-base text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Resources</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Case Studies</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Webinars</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Whitepapers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Connect</极3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">LinkedIn</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between">
+                <p class="text-base极text-gray-400">
+                    &copy; 2023 SkyTech Solutions. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-300">
+                        <span class="sr-only">Privacy</span>
+                        Privacy Policy
+                    </a>
+                    <a href="#" class="text极gray-400 hover:text-gray-300">
+                        <span class="sr-only">Terms</span>
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                feather.replace();
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Password visibility toggle
+        document.getElementById('password-toggle').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                feather.replace();
+                eyeIcon.setAttribute('data-feather', 'eye-off');
+            } else {
+                passwordInput.type = 'password';
+                feather.replace();
+                eyeIcon.setAttribute('data-feather', 'eye');
+            }
+            feather.replace();
+        });
+
+        // Form submission with basic validation
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+            
+            if (!username || !password) {
+                alert('Please enter both username and password');
+                return;
+            }
+            
+            // Simulate secure authentication (in production, this would connect to a backend)
+            // This is just a demo - real implementation would use proper authentication protocols
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            submitButton.disabled = true;
+            submitButton.textContent = 'Authenticating...';
+            
+            // Simulate authentication process
+            setTimeout(() => {
+                if (username === 'demo' && password === 'demo123') {
+                    alert('Login successful! Redirecting to employee dashboard...');
+                    // In production, this would redirect to the actual dashboard
+                    window.location.href = '#'; // Placeholder for actual redirect
+                } else {
+                    alert('Invalid credentials. Please try again.');
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalText;
+                }
+            }, 1500);
+        });
+
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Replace icons
+        feather.replace();
+    </script>
+</body>
+</html>

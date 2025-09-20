@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkyTech Solutions - Innovative technology solutions for the airline industry">
+    <title>SkyTech Solutions | Airline Technology Specialists</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-smooth {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <svg class="h-8 w-8 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L3 10L6 10L6 22L10 22L10 15L14 15L14 22L18 22L18 10L21 10L12 2Z" fill="currentColor"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-blue-800">SkyTech</span>
+                    </a>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:space-x-8">
+                    <a href="index.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                    <a href="services.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
+                    <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                    <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    <a href="login.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Login</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="services.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Services</a>
+                <a href="about.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About</a>
+                <a href="contact.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
+                <a href="login.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient pt-24 pb-32 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="px-4 sm:px-0 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+                    <div>
+                        <h1 class="mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl" data-aos="fade-right">
+                            Elevating Airline Operations Through Technology
+                        </h1>
+                        <p class="mt-3 text-xl text-blue-100 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0" data-aos="fade-right" data-aos-delay="100">
+                            Innovative solutions designed to streamline airline operations, enhance passenger experience, and maximize efficiency.
+                        </p>
+                        <div class="mt-10 sm:mt-12" data-aos="fade-right" data-aos-delay="200">
+                            <a href="services.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-700 bg-white hover:bg-blue-50 transition-smooth">
+                                Explore Our Solutions
+                                <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6" data-aos="fade-left">
+                    <div class="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+                        <img src="http://static.photos/technology/1024x576/1" alt="Airline technology dashboard" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trusted By Section -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-lg font-semibold text-gray-500">TRUSTED BY LEADING AIRLINES WORLDWIDE</h2>
+            <div class="mt-8 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+                <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="https://logo.clearbit.com/delta.com" alt="Delta">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="https://logo.clearbit.com/united.com" alt="United">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="https://logo.clearbit.com/emirates.com" alt="Emirates">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="https://logo.clearbit.com/qatarairways.com" alt="Qatar Airways">
+                </div>
+                <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="https://logo.clearbit.com/lufthansa.com" alt="Lufthansa">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Preview -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl" data-aos="fade-up">
+                    Our Technology Solutions
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Tailored solutions addressing the unique challenges of the airline industry
+                </p>
+            </div>
+
+            <div class="mt-16">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-smooth" data-aos="fade-up" data-aos-delay="200">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-100 rounded-md p-3">
+                                    <i data-feather="cpu" class="h-6 w-6 text-blue-600"></i>
+                                </div>
+                                <div class="ml-5">
+                                    <h3 class="text-lg font-medium text-gray-900">Flight Operations</h3>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-base text-gray-500">
+                                Real-time flight tracking, crew scheduling, and operational efficiency tools to keep your airline running smoothly.
+                            </p>
+                            <div class="mt-6">
+                                <a href="services.html#flight-ops" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                                    Learn more
+                                    <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-smooth" data-aos="fade-up" data-aos-delay="300">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-100 rounded-md p-3">
+                                    <i data-feather="users" class="h-6 w-6 text-blue-600"></i>
+                                </div>
+                                <div class="ml-5">
+                                    <h3 class="text-lg font-medium text-gray-900">Passenger Experience</h3>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-base text-gray-500">
+                                Seamless check-in, boarding, and in-flight experience solutions that delight your passengers.
+                            </p>
+                            <div class="mt-6">
+                                <a href="services.html#passenger-exp" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                                    Learn more
+                                    <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition-smooth" data-aos="fade-up" data-aos-delay="400">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-100 rounded-md p-3">
+                                    <i data-feather="bar-chart-2" class="h-6 w-6 text-blue-600"></i>
+                                </div>
+                                <div class="ml-5">
+                                    <h3 class="text-lg font-medium text-gray-900">Revenue Optimization</h3>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-base text-gray-500">
+                                Advanced analytics and dynamic pricing tools to maximize your airline's profitability.
+                            </p>
+                            <div class="mt-6">
+                                <a href="services.html#revenue" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                                    Learn more
+                                    <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Preview -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="lg:col-span-6" data-aos="fade-right">
+                    <img class="rounded-lg shadow-lg" src="http://static.photos/office/1024x576/2" alt="SkyTech team working">
+                </div>
+                <div class="mt-12 lg:mt-0 lg:col-span-6" data-aos="fade-left">
+                    <h2 class="text-3xl font-extrabold text-gray-900">
+                        Who We Are
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500">
+                        Founded by aviation and technology veterans, SkyTech Solutions brings together decades of industry experience with cutting-edge technical expertise.
+                    </p>
+                    <div class="mt-8">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                                    <i data-feather="target"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Our Mission</h3>
+                                <p class="mt-2 text-base text-gray-500">
+                                    To revolutionize airline operations through innovative technology solutions that drive efficiency, enhance passenger experience, and maximize profitability.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                                        <i data-feather="eye"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Our Vision</h3>
+                                    <p class="mt-2 text-base text-gray-500">
+                                        To be the global leader in airline technology solutions, setting the standard for innovation and operational excellence in the aviation industry.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="about.html" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-smooth">
+                            Learn More About Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-blue-700">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl" data-aos="fade-right">
+                        Ready to transform your airline's operations?
+                    </h2>
+                    <p class="mt-3 max-w-3xl text-lg leading-6 text-blue-200" data-aos="fade-right" data-aos-delay="100">
+                        Our team of experts is ready to discuss how we can help your airline achieve operational excellence.
+                    </p>
+                </div>
+                <div class="mt-8 lg:mt-0" data-aos="fade-left">
+                    <div class="inline-flex rounded-md shadow">
+                        <a href="contact.html" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 transition-smooth">
+                            Contact Our Team
+                        </a>
+                    </div>
+                    <div class="inline-flex ml-3 rounded-md shadow">
+                        <a href="tel:+18005551234" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 bg-opacity-60 hover:bg-opacity-70 transition-smooth">
+                            <i data-feather="phone" class="mr-2 w-4 h-4"></i>
+                            Call Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="services.html#flight-ops" class="text-base text-gray-300 hover:text-white transition-smooth">Flight Operations</a></li>
+                        <li><a href="services.html#passenger-exp" class="text-base text-gray-300 hover:text-white transition-smooth">Passenger Experience</a></li>
+                        <li><a href="services.html#revenue" class="text-base text-gray-300 hover:text-white transition-smooth">Revenue Optimization</a></li>
+                        <li><a href="services.html#maintenance" class="text-base text-gray-300 hover:text-white transition-smooth">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="about.html" class="text-base text-gray-300 hover:text-white transition-smooth">About</a></li>
+                        <li><a href="about.html#leadership" class="text-base text-gray-300 hover:text-white transition-smooth">Leadership</a></li>
+                        <li><a href="about.html#careers" class="text-base text-gray-300 hover:text-white transition-smooth">Careers</a></li>
+                        <li><a href="contact.html" class="text-base text-gray-300 hover:text-white transition-smooth">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Resources</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white transition-smooth">Blog</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white transition-smooth">Case Studies</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white transition-smooth">Webinars</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white transition-smooth">Whitepapers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Connect</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white transition-smooth">Twitter</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white transition-smooth">LinkedIn</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white transition-smooth">Facebook</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white transition-smooth">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between">
+                <p class="text-base text-gray-400">
+                    &copy; 2023 SkyTech Solutions. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-300 transition-smooth">
+                        <span class="sr-only">Privacy</span>
+                        Privacy Policy
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-300 transition-smooth">
+                        <span class="sr-only">Terms</span>
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                feather.replace();
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Replace icons
+        feather.replace();
+    </script>
+</body>
+</html>
